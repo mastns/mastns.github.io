@@ -28,8 +28,10 @@ jobs:
     runs-on: ubuntu-26.04
     timeout-minutes: 10
     env:
-      # The certificate on the FTP server is for *.papaki.gr, so connect by the server's own name.
-      FTP_SERVER: ${{ vars.FTP_SERVER || 'linux252.papaki.gr' }}
+      # Connect through the domain's FTP name. The server's certificate is for *.papaki.gr,
+      # so TLS checks it under the server's own papaki.gr name (the same machine).
+      FTP_HOST: ${{ vars.FTP_HOST || 'ftp.mastrogeorgiou.gr' }}
+      FTP_CERT_NAME: ${{ vars.FTP_CERT_NAME || 'linux252.papaki.gr' }}
       SITE_URL: https://mastrogeorgiou.gr/
     steps:
       - name: Check the FTP login is configured
@@ -86,24 +88,25 @@ jobs:
           esc() { printf '%s' "$1" | sed 's/\\/\\\\/g; s/"/\\"/g'; }
           printf 'user = "%s:%s"\n' "$(esc "$FTP_USERNAME")" "$(esc "$FTP_PASSWORD")" > "$cfg"
           # TLS is required for login and data, and the server certificate is verified.
-          # --fail-early stops at the first failed transfer (otherwise only the last one counts).
-          ftp() { curl --config "$cfg" --ssl-reqd --tlsv1.2 --fail --fail-early --silent --show-error --retry 2 "$@"; }
+          # URLs carry $FTP_CERT_NAME (the name checked against the certificate); --connect-to
+          # sends the connection to $FTP_HOST. --fail-early stops at the first failed transfer.
+          ftp() { curl --config "$cfg" --connect-to "$FTP_CERT_NAME::$FTP_HOST:" --ssl-reqd --tlsv1.2 --fail --fail-early --silent --show-error --retry 2 "$@"; }
 
           # Plesk's main FTP user logs in above httpdocs; an FTP user created for httpdocs logs in inside it.
           # (Listings go into variables first: grep -q exiting early would break the pipe under pipefail.)
-          home_list=$(ftp --list-only "ftp://$FTP_SERVER/" | tr -d '\r')
+          home_list=$(ftp --list-only "ftp://$FTP_CERT_NAME/" | tr -d '\r')
           if grep -qx 'httpdocs' <<<"$home_list"; then dir='httpdocs/'; else dir=''; fi
           # Refuse to upload anywhere that does not already hold the site.
-          site_list=$(ftp --list-only "ftp://$FTP_SERVER/$dir" | tr -d '\r')
+          site_list=$(ftp --list-only "ftp://$FTP_CERT_NAME/$dir" | tr -d '\r')
           if ! grep -qx 'index.html' <<<"$site_list"; then
-            echo "::error::No index.html in '/$dir' on $FTP_SERVER, so nothing was uploaded."
+            echo "::error::No index.html in '/$dir' on $FTP_HOST, so nothing was uploaded."
             exit 1
           fi
 
           args=()
-          for f in "${files[@]}"; do args+=(-T "$f" "ftp://$FTP_SERVER/$dir$f"); done
+          for f in "${files[@]}"; do args+=(-T "$f" "ftp://$FTP_CERT_NAME/$dir$f"); done
           ftp --ftp-create-dirs "${args[@]}"
-          echo "Uploaded ${#files[@]} files to /$dir on $FTP_SERVER"
+          echo "Uploaded ${#files[@]} files to /$dir on $FTP_HOST"
 
       - name: Check mastrogeorgiou.gr now matches this commit
         if: steps.login.outputs.ready == 'true'
