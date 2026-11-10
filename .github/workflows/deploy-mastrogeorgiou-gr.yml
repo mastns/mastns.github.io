@@ -1,5 +1,6 @@
-# Keeps https://mastrogeorgiou.gr/ an exact copy of this site (its canonical is
-# https://mastns.github.io/). Uploads over FTPS to the Papaki/Plesk hosting.
+# Keeps the Plesk host that currently answers for https://mastrogeorgiou.gr/ (the site's
+# canonical address) an exact copy of this site, until that DNS points at GitHub Pages and
+# this workflow is removed. Uploads over FTPS to the Papaki/Plesk hosting.
 # Needs repository secrets FTP_USERNAME and FTP_PASSWORD; skips cleanly without them.
 name: Deploy copy to mastrogeorgiou.gr
 
@@ -10,6 +11,9 @@ on:
       - index.html
       - favicon.ico
       - google204242c25d647ff0.html
+      - robots.txt
+      - sitemap.xml
+      - mastrogeorgiou.github.io/index.html
       - assets/**
       - .github/workflows/deploy-mastrogeorgiou-gr.yml
   workflow_dispatch:
@@ -69,7 +73,7 @@ jobs:
           # The files that make up the copy: assets first and index.html last,
           # so the live page never points at a missing file.
           mapfile -t files < <(find assets -type f ! -name '.*' | sort)
-          files+=(favicon.ico google204242c25d647ff0.html index.html)
+          files+=(favicon.ico google204242c25d647ff0.html robots.txt sitemap.xml mastrogeorgiou.github.io/index.html index.html)
           for f in "${files[@]}"; do
             # Plain files with plain names only: a symlink could publish files from the runner
             # (including the FTP login), and %, #, ? or .. would change the FTP path.
