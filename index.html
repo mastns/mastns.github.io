@@ -434,6 +434,8 @@
 </footer>
 
 <script>
+	// Upgrade plain-http visits while the host's HTTPS enforcement is unavailable.
+	if (location.protocol === 'http:' && /(^|\.)mastrogeorgiou\.gr$/.test(location.hostname)) location.replace('https://mastrogeorgiou.gr' + location.pathname + location.search + location.hash);
 	const bar = document.querySelector('.top');
 	const onScroll = () => bar.classList.toggle('scrolled', window.scrollY > 8);
 	addEventListener('scroll', onScroll, { passive: true });
