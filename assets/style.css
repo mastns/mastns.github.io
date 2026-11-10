@@ -88,7 +88,6 @@ strong { font-weight: 600; }
 .intro h1 { font-size: clamp(2.4rem, 6vw, 3.5rem); line-height: 1.02; letter-spacing: -.04em; font-weight: 600; text-wrap: balance; }
 .intro .lede { margin-top: 1.5rem; font-size: 1.125rem; line-height: 1.55; color: var(--muted); max-width: 36em; text-wrap: pretty; }
 .intro .lede strong { color: var(--text); font-weight: 500; }
-.intro .lede .method { display: block; font-size: clamp(1.375rem, 1.2rem + .9vw, 1.75rem); line-height: 1.15; letter-spacing: -.02em; margin-bottom: .6em; }
 .intro picture { padding-top: .5rem; }
 .portrait {
   width: 240px; height: 240px; border-radius: 50%; object-fit: cover;
