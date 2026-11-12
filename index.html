@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Athanasios Mastrogeorgiou — Robotics R&amp;D, simulation to field</title>
-	<meta name="description" content="Athanasios Mastrogeorgiou: robot perception, planning and control from simulation to the field, in research and industry. Senior Robotics Researcher at HERON.">
+	<meta name="description" content="Athanasios Mastrogeorgiou, robotics researcher and engineer in Athens, Greece: perception, planning and control for legged and field robots, lab to field.">
 	<meta name="author" content="Athanasios Mastrogeorgiou">
 	<meta name="google-site-verification" content="UVL8eoiH9ClVKb3MD8ViUsMqmoFBZj9ao8wGdy-_my0">
 	<meta name="color-scheme" content="light dark">
@@ -24,56 +24,415 @@
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
-		"@type": "ProfilePage",
-		"url": "https://mastrogeorgiou.gr/",
-		"mainEntity": {
-			"@type": "Person",
-			"@id": "https://mastrogeorgiou.gr/#person",
-			"name": "Athanasios Mastrogeorgiou",
-			"alternateName": ["Thanasis Mastrogeorgiou", "Αθανάσιος Μαστρογεωργίου"],
-			"url": "https://mastrogeorgiou.gr/",
-			"image": "https://mastrogeorgiou.gr/assets/img/portrait-960.jpg",
-			"email": "mailto:mastrothanasis@gmail.com",
-			"jobTitle": "Senior Robotics Researcher",
-			"description": "Senior Robotics Researcher at HERON and Ph.D. candidate in Mechatronics; formerly Senior Robotics Engineer at RobotiCo and Delivery Manager at Tech Hive Labs. Takes perception, motion planning and control for legged and field robots from high-fidelity simulation to field deployment in agriculture, healthcare logistics, energy infrastructure and industrial automation.",
-			"worksFor": {
-				"@type": "Organization",
-				"name": "HERON – Hellenic Robotics Center of Excellence",
-				"url": "https://heron-robotics-coe.eu/"
+		"@graph": [
+			{
+				"@type": "WebSite",
+				"@id": "https://mastrogeorgiou.gr/#website",
+				"name": "Athanasios Mastrogeorgiou",
+				"alternateName": [
+					"Thanasis Mastrogeorgiou",
+					"mastrogeorgiou.gr"
+				],
+				"url": "https://mastrogeorgiou.gr/",
+				"inLanguage": "en",
+				"about": {
+					"@id": "https://mastrogeorgiou.gr/#person"
+				},
+				"publisher": {
+					"@id": "https://mastrogeorgiou.gr/#person"
+				}
 			},
-			"affiliation": {
+			{
+				"@type": "ProfilePage",
+				"@id": "https://mastrogeorgiou.gr/#page",
+				"url": "https://mastrogeorgiou.gr/",
+				"isPartOf": {
+					"@id": "https://mastrogeorgiou.gr/#website"
+				},
+				"inLanguage": "en",
+				"dateCreated": "2014-04-02",
+				"dateModified": "2026-11-12",
+				"mainEntity": {
+					"@id": "https://mastrogeorgiou.gr/#person"
+				}
+			},
+			{
+				"@type": "Person",
+				"@id": "https://mastrogeorgiou.gr/#person",
+				"name": "Athanasios Mastrogeorgiou",
+				"givenName": "Athanasios",
+				"familyName": "Mastrogeorgiou",
+				"alternateName": [
+					"Thanasis Mastrogeorgiou",
+					"Thanassis Mastrogeorgiou",
+					"Athanasios S. Mastrogeorgiou",
+					"A. S. Mastrogeorgiou",
+					"Αθανάσιος Μαστρογεωργίου",
+					"Θανάσης Μαστρογεωργίου"
+				],
+				"url": "https://mastrogeorgiou.gr/",
+				"image": {
+					"@type": "ImageObject",
+					"url": "https://mastrogeorgiou.gr/assets/img/portrait-960.jpg",
+					"contentUrl": "https://mastrogeorgiou.gr/assets/img/portrait-960.jpg",
+					"width": 960,
+					"height": 960,
+					"caption": "Portrait of Athanasios Mastrogeorgiou"
+				},
+				"email": "mailto:mastrothanasis@gmail.com",
+				"identifier": {
+					"@type": "PropertyValue",
+					"propertyID": "ORCID",
+					"value": "0000-0002-2910-3930",
+					"url": "https://orcid.org/0000-0002-2910-3930"
+				},
+				"jobTitle": "Senior Robotics Researcher",
+				"hasOccupation": [
+					{
+						"@type": "Occupation",
+						"name": "Robotics Researcher"
+					},
+					{
+						"@type": "Occupation",
+						"name": "Robotics Engineer"
+					}
+				],
+				"description": "Senior Robotics Researcher at HERON and Ph.D. candidate in Mechatronics; formerly Senior Robotics Engineer at RobotiCo and Delivery Manager at Tech Hive Labs. Takes perception, motion planning and control for legged and field robots from high-fidelity simulation to field deployment in agriculture, healthcare logistics, energy infrastructure and industrial automation.",
+				"worksFor": {
+					"@type": "Organization",
+					"name": "HERON – Hellenic Robotics Center of Excellence",
+					"@id": "https://heron-robotics-coe.eu/#organization",
+					"url": "https://heron-robotics-coe.eu/"
+				},
+				"affiliation": {
+					"@id": "https://www.ntua.gr/#organization"
+				},
+				"alumniOf": [
+					{
+						"@id": "https://www.ntua.gr/#organization"
+					},
+					{
+						"@id": "https://www.ed.ac.uk/#organization"
+					},
+					{
+						"@id": "https://www.uom.gr/#organization"
+					}
+				],
+				"hasCredential": [
+					{
+						"@type": "EducationalOccupationalCredential",
+						"name": "Postgraduate Studies in Automation",
+						"credentialCategory": "degree",
+						"recognizedBy": {
+							"@id": "https://www.ntua.gr/#organization"
+						},
+						"dateCreated": "2013"
+					},
+					{
+						"@type": "EducationalOccupationalCredential",
+						"name": "MSc in Artificial Intelligence",
+						"credentialCategory": "degree",
+						"recognizedBy": {
+							"@id": "https://www.ed.ac.uk/#organization"
+						},
+						"dateCreated": "2009"
+					},
+					{
+						"@type": "EducationalOccupationalCredential",
+						"name": "BSc in Applied Informatics",
+						"credentialCategory": "degree",
+						"recognizedBy": {
+							"@id": "https://www.uom.gr/#organization"
+						},
+						"dateCreated": "2008"
+					}
+				],
+				"award": [
+					"Best Agri-Robotics Paper Finalist, IEEE/RSJ IROS 2024",
+					"Best Paper Finalist, IEEE/ASME AIM 2023",
+					"Second Prize, CLAWAR 2020"
+				],
+				"homeLocation": {
+					"@type": "Place",
+					"address": {
+						"@type": "PostalAddress",
+						"addressLocality": "Athens",
+						"addressCountry": "GR"
+					}
+				},
+				"knowsLanguage": [
+					"el",
+					"en"
+				],
+				"knowsAbout": [
+					"Legged robots",
+					"Quadruped locomotion",
+					"Robot perception",
+					"Motion planning",
+					"Robot control",
+					"Deep reinforcement learning",
+					"Visual SLAM",
+					"Agricultural robotics",
+					"Field robotics",
+					"Inspection robots",
+					"Robot simulation",
+					"ROS"
+				],
+				"performerIn": [
+					{
+						"@type": "Event",
+						"name": "Legged Robots: The Next Steps Towards Agile Mobility",
+						"startDate": "2026-06",
+						"location": {
+							"@type": "Place",
+							"name": "Athens",
+							"address": {
+								"@type": "PostalAddress",
+								"addressLocality": "Athens",
+								"addressCountry": "GR"
+							}
+						},
+						"url": "https://heron-robotics-coe.eu/1st-summer-school-in-robotics-and-ai/",
+						"performer": {
+							"@id": "https://mastrogeorgiou.gr/#person"
+						},
+						"description": "Plenary talk, 1st HERON Summer School in Robotics and AI"
+					},
+					{
+						"@type": "Event",
+						"name": "Computer Vision for Automatized Harvesting",
+						"startDate": "2024-05",
+						"location": {
+							"@type": "Place",
+							"name": "Yokohama",
+							"address": {
+								"@type": "PostalAddress",
+								"addressLocality": "Yokohama",
+								"addressCountry": "JP"
+							}
+						},
+						"url": "https://www.santannapisa.it/en/icra-2024-workshop-agri-robotics",
+						"performer": {
+							"@id": "https://mastrogeorgiou.gr/#person"
+						},
+						"description": "Invited talk, IEEE ICRA 2024 Workshop on Agri-Robotics"
+					},
+					{
+						"@type": "Event",
+						"name": "Markerless Motion Analysis",
+						"startDate": "2023-09",
+						"location": {
+							"@type": "Place",
+							"name": "Athens",
+							"address": {
+								"@type": "PostalAddress",
+								"addressLocality": "Athens",
+								"addressCountry": "GR"
+							}
+						},
+						"url": "https://web.archive.org/web/20231004165451/https://www.esmac2023.org/pre-conference-seminars/",
+						"performer": {
+							"@id": "https://mastrogeorgiou.gr/#person"
+						},
+						"description": "Pre-conference seminar, ESMAC 2023 pre-conference seminar"
+					}
+				],
+				"subjectOf": [
+					{
+						"@type": "NewsArticle",
+						"headline": "Τα ελληνικά ρομπότ που θέλουν να κατακτήσουν το Διάστημα",
+						"url": "https://www.kathimerini.gr/economy/business/564454018/ta-ellinika-rompot-poy-theloyn-na-kataktisoyn-to-diastima/",
+						"datePublished": "2026-09",
+						"inLanguage": "el",
+						"publisher": {
+							"@type": "Organization",
+							"name": "Η Καθημερινή",
+							"url": "https://www.kathimerini.gr/"
+						}
+					},
+					{
+						"@type": "NewsArticle",
+						"headline": "Ρομπότ με αντίληψη, το στοίχημα στο ΕΜΠ",
+						"url": "https://www.kathimerini.gr/society/1061170/rompot-me-antilipsi-to-stoichima-sto-emp/",
+						"datePublished": "2020-01",
+						"inLanguage": "el",
+						"publisher": {
+							"@type": "Organization",
+							"name": "Η Καθημερινή",
+							"url": "https://www.kathimerini.gr/"
+						}
+					}
+				],
+				"sameAs": [
+					"https://www.linkedin.com/in/mastrogeorgiou",
+					"https://scholar.google.com/citations?user=yvxz7GUAAAAJ",
+					"https://orcid.org/0000-0002-2910-3930",
+					"https://github.com/mastns",
+					"https://www.researchgate.net/profile/Athanasios-Mastrogeorgiou",
+					"https://www.semanticscholar.org/author/Athanasios-S.-Mastrogeorgiou/1572221899",
+					"https://dblp.org/pid/285/2992.html",
+					"https://ieeexplore.ieee.org/author/37088688942",
+					"https://www.scopus.com/authid/detail.uri?authorId=57219112598",
+					"https://openalex.org/A5090225834",
+					"https://arxiv.org/a/0000-0002-2910-3930.html",
+					"https://www.youtube.com/@mastrogeorgiou"
+				]
+			},
+			{
 				"@type": "CollegeOrUniversity",
 				"name": "National Technical University of Athens",
-				"url": "https://www.ntua.gr/"
+				"@id": "https://www.ntua.gr/#organization",
+				"url": "https://www.ntua.gr/",
+				"sameAs": [
+					"https://www.wikidata.org/wiki/Q1640726",
+					"https://ror.org/03cx6bg69"
+				]
 			},
-			"alumniOf": [
-				{ "@type": "CollegeOrUniversity", "name": "National Technical University of Athens" },
-				{ "@type": "CollegeOrUniversity", "name": "University of Edinburgh" },
-				{ "@type": "CollegeOrUniversity", "name": "University of Macedonia" }
-			],
-			"knowsAbout": ["Legged robots", "Robot perception", "Motion planning", "Deep reinforcement learning", "Visual SLAM", "Agricultural robotics", "Inspection robots", "Robot simulation", "ROS"],
-			"sameAs": [
-				"https://www.linkedin.com/in/mastrogeorgiou",
-				"https://scholar.google.com/citations?user=yvxz7GUAAAAJ",
-				"https://orcid.org/0000-0002-2910-3930",
-				"https://github.com/mastns",
-				"https://www.researchgate.net/profile/Athanasios-Mastrogeorgiou",
-				"https://www.semanticscholar.org/author/Athanasios-S.-Mastrogeorgiou/1572221899",
-				"https://dblp.org/pid/285/2992.html",
-				"https://ieeexplore.ieee.org/author/37088688942",
-				"https://www.scopus.com/authid/detail.uri?authorId=57219112598",
-				"https://www.youtube.com/@mastrogeorgiou"
-			]
-		}
-	}
-	</script>
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "WebSite",
-		"name": "Athanasios Mastrogeorgiou",
-		"alternateName": ["Thanasis Mastrogeorgiou", "mastrogeorgiou.gr"],
-		"url": "https://mastrogeorgiou.gr/"
+			{
+				"@type": "CollegeOrUniversity",
+				"name": "University of Edinburgh",
+				"@id": "https://www.ed.ac.uk/#organization",
+				"url": "https://www.ed.ac.uk/",
+				"sameAs": [
+					"https://www.wikidata.org/wiki/Q160302",
+					"https://ror.org/01nrxwf90"
+				]
+			},
+			{
+				"@type": "CollegeOrUniversity",
+				"name": "University of Macedonia",
+				"@id": "https://www.uom.gr/#organization",
+				"url": "https://www.uom.gr/",
+				"sameAs": [
+					"https://www.wikidata.org/wiki/Q1637117",
+					"https://ror.org/05fg6gr82"
+				]
+			},
+			{
+				"@type": "ScholarlyArticle",
+				"@id": "https://doi.org/10.1109/IROS58592.2024.10801409",
+				"headline": "Vinymap: A Vineyard Inspection and 3D Reconstruction Framework for Agricultural Robots",
+				"author": [
+					{
+						"@type": "Person",
+						"name": "I. Zarras"
+					},
+					{
+						"@id": "https://mastrogeorgiou.gr/#person"
+					},
+					{
+						"@type": "Person",
+						"name": "K. Machairas"
+					},
+					{
+						"@type": "Person",
+						"name": "K. Koutsoukis"
+					},
+					{
+						"@type": "Person",
+						"name": "E. Papadopoulos"
+					}
+				],
+				"datePublished": "2024",
+				"isPartOf": {
+					"@type": "CreativeWork",
+					"name": "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2024"
+				},
+				"publisher": {
+					"@type": "Organization",
+					"name": "IEEE"
+				},
+				"identifier": {
+					"@type": "PropertyValue",
+					"propertyID": "DOI",
+					"value": "10.1109/IROS58592.2024.10801409"
+				},
+				"sameAs": "https://doi.org/10.1109/IROS58592.2024.10801409",
+				"url": "https://nereus.mech.ntua.gr/pdf_ps/IROS24_2447.pdf",
+				"award": "Best Agri-Robotics Paper Finalist, IEEE/RSJ IROS 2024",
+				"inLanguage": "en"
+			},
+			{
+				"@type": "ScholarlyArticle",
+				"@id": "https://doi.org/10.1109/AIM46323.2023.10196219",
+				"headline": "Low-Cost, Accurate Robotic Harvesting System for Existing Mushroom Farms",
+				"author": [
+					{
+						"@type": "Person",
+						"name": "P. Mavridis"
+					},
+					{
+						"@type": "Person",
+						"name": "N. Mavrikis"
+					},
+					{
+						"@id": "https://mastrogeorgiou.gr/#person"
+					},
+					{
+						"@type": "Person",
+						"name": "P. Chatzakos"
+					}
+				],
+				"datePublished": "2023",
+				"isPartOf": {
+					"@type": "CreativeWork",
+					"name": "IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM) 2023"
+				},
+				"publisher": {
+					"@type": "Organization",
+					"name": "IEEE"
+				},
+				"identifier": {
+					"@type": "PropertyValue",
+					"propertyID": "DOI",
+					"value": "10.1109/AIM46323.2023.10196219"
+				},
+				"sameAs": "https://doi.org/10.1109/AIM46323.2023.10196219",
+				"url": "https://doi.org/10.1109/AIM46323.2023.10196219",
+				"award": "Best Paper Finalist, IEEE/ASME AIM 2023",
+				"inLanguage": "en"
+			},
+			{
+				"@type": "ScholarlyArticle",
+				"@id": "https://doi.org/10.13180/clawar.2020.24-26.08.58",
+				"headline": "Evaluating Deep Reinforcement Learning Algorithms for Quadrupedal Slope Handling",
+				"author": [
+					{
+						"@id": "https://mastrogeorgiou.gr/#person"
+					},
+					{
+						"@type": "Person",
+						"name": "Y. Elbahrawy"
+					},
+					{
+						"@type": "Person",
+						"name": "K. Machairas"
+					},
+					{
+						"@type": "Person",
+						"name": "A. Kecskeméthy"
+					},
+					{
+						"@type": "Person",
+						"name": "E. Papadopoulos"
+					}
+				],
+				"datePublished": "2020",
+				"isPartOf": {
+					"@type": "CreativeWork",
+					"name": "CLAWAR 2020"
+				},
+				"identifier": {
+					"@type": "PropertyValue",
+					"propertyID": "DOI",
+					"value": "10.13180/clawar.2020.24-26.08.58"
+				},
+				"sameAs": "https://doi.org/10.13180/clawar.2020.24-26.08.58",
+				"url": "https://nereus.mech.ntua.gr/pdf_ps/CLAWAR20.pdf",
+				"award": "Second Prize, CLAWAR 2020",
+				"inLanguage": "en"
+			}
+		]
 	}
 	</script>
 	<link rel="icon" href="favicon.ico" sizes="32x32">
@@ -104,6 +463,8 @@
 	<symbol id="i-orcid" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.8 10.5V16.5M8.8 7.6v.1M12 7.8v8.7h1.8a4.35 4.35 0 0 0 0-8.7z"/></symbol>
 	<symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="m8.7 13.4-1.2 7.1 4.5-2.4 4.5 2.4-1.2-7.1"/></symbol>
 	<symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+	<symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></symbol>
+	<symbol id="i-play" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="m9.5 8.6 6.2 3.4-6.2 3.4z"/></symbol>
 </svg>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -139,6 +500,8 @@
 				<a href="https://www.linkedin.com/in/mastrogeorgiou" rel="me"><svg aria-hidden="true"><use href="#i-in"/></svg>LinkedIn</a>
 				<a href="https://scholar.google.com/citations?user=yvxz7GUAAAAJ" rel="me"><svg aria-hidden="true"><use href="#i-scholar"/></svg>Google Scholar</a>
 				<a href="https://orcid.org/0000-0002-2910-3930" rel="me"><svg aria-hidden="true"><use href="#i-orcid"/></svg>ORCID</a>
+				<a href="https://github.com/mastns" rel="me"><svg aria-hidden="true"><use href="#i-code"/></svg>GitHub</a>
+				<a href="https://www.youtube.com/@mastrogeorgiou" rel="me"><svg aria-hidden="true"><use href="#i-play"/></svg>YouTube</a>
 			</div>
 		</div>
 		<picture>
@@ -229,7 +592,7 @@
 					<p>Trotting controllers for the Laelaps II quadruped that combine deep reinforcement learning with toe trajectory planning to handle slopes. A companion study compared three learning algorithms; later work rewarded energy-efficient trotting.</p>
 					<p class="setup"><span class="lbl">Setup</span>Laelaps II quadruped model in Gazebo, slopes up to 15° · MuJoCo for Cost-of-Transport runs · DDPG vs PPO vs SAC</p>
 					<span class="badge"><svg aria-hidden="true"><use href="#i-award"/></svg>Second Prize&nbsp;· CLAWAR&nbsp;2020</span>
-					<div class="refs"><a href="https://nereus.mech.ntua.gr/pdf_ps/iros20b.pdf">IROS 2020</a><a href="https://youtu.be/tbqZYwL_1ns">Video</a><a href="https://nereus.mech.ntua.gr/pdf_ps/CLAWAR20.pdf">CLAWAR 2020</a><a href="https://youtu.be/rqOpLMXtgMk">Video</a><a href="https://nereus.mech.ntua.gr/pdf_ps/CLAWAR22.pdf">CLAWAR 2022</a></div>
+					<div class="refs"><a href="https://nereus.mech.ntua.gr/pdf_ps/iros20b.pdf">IROS 2020</a><a href="https://youtu.be/tbqZYwL_1ns">Video</a><a href="https://github.com/mastns/Laelaps2_DDPG">Code</a><a href="https://nereus.mech.ntua.gr/pdf_ps/CLAWAR20.pdf">CLAWAR 2020</a><a href="https://youtu.be/rqOpLMXtgMk">Video</a><a href="https://nereus.mech.ntua.gr/pdf_ps/CLAWAR22.pdf">CLAWAR 2022</a></div>
 				</article>
 				<article class="entry">
 					<div class="meta"><span>2019–2025</span><span>Gait analysis</span></div>
@@ -396,8 +759,9 @@
 		<h2><span class="n" aria-hidden="true">06</span>About</h2>
 		<div>
 			<div class="prose">
-				<p>Athanasios (Thanasis) Mastrogeorgiou works at the boundary of robotics research and industry. He is a Senior Robotics Researcher at HERON and a Ph.D. candidate in Mechatronics; from 2018 to 2025 he worked in parallel in industry, as Robotics Software Engineer at IKNOWHOW and CiTARD, Senior Robotics Engineer at RobotiCo and Delivery Manager at Tech Hive Labs, where he managed nine robotics and AI projects end to end.</p>
+				<p>Athanasios (Thanasis) Mastrogeorgiou works at the boundary of robotics research and industry, in Athens, Greece. He is a Senior Robotics Researcher at HERON and a Ph.D. candidate in Mechatronics; from 2018 to 2025 he worked in parallel in industry, as Robotics Software Engineer at IKNOWHOW and CiTARD, Senior Robotics Engineer at RobotiCo and Delivery Manager at Tech Hive Labs, where he managed nine robotics and AI projects end to end.</p>
 				<p>He takes perception, motion planning and control from high-fidelity simulation to field deployments in agriculture, healthcare logistics, energy infrastructure and industrial automation; on the way, the work passes through test beds such as a synthetic vineyard, 3D-printed mushrooms on real soil and Gazebo slopes of up to 15°. Since 2014 he has worked with the Legged Robots Team on the Laelaps II quadruped, from its EtherCAT master to deep-RL trotting, and on vineyard inspection with multi-camera SLAM; within the EU-funded SoftGrip project he helped build a low-cost mushroom-harvesting gantry.</p>
+				<p lang="el">Ο Αθανάσιος (Θανάσης) Μαστρογεωργίου είναι Senior Robotics Researcher στο HERON και υποψήφιος διδάκτορας στη μηχατρονική, με έδρα την Αθήνα. Ασχολείται με την αντίληψη, τον σχεδιασμό κίνησης και τον έλεγχο τετράποδων ρομπότ και ρομπότ πεδίου, από την προσομοίωση μέχρι την εφαρμογή στο πεδίο, στην έρευνα και στη βιομηχανία.</p>
 			</div>
 
 			<h3 class="subhead">Education</h3>
